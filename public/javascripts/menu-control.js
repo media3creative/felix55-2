@@ -1,5 +1,5 @@
 var whichPic = 1;
-var currentPage = "#page0"
+var currentPage = "#page1"
 var bg_1_pic = "bg_1.jpg"
 var bg_2_pic = "bg_1.jpg"
 var agent=navigator.userAgent.toLowerCase();
@@ -201,7 +201,7 @@ $(document).ready(function() {
 			changePage("#menuPage-5","bg_6.jpg");
 		}
 	)
-	//setInterval(slideShow,6000);
+	setInterval(slideShow,6000);
 });
 function ipadFunc(){
 	if(is_ipad
@@ -261,19 +261,19 @@ function slideShow(){
 	|| currentPage == "#page0"){
 		whichPic += 1;
 		if(whichPic == 1){
-			switchBg("bg1.jpg");
+			switchBg("bg_1.jpg");
 		}
 		if(whichPic == 2){
-			switchBg("bg2.jpg");
+			switchBg("bg_1_2.jpg");
 		}
 		if(whichPic == 3){
-			switchBg("bg3.jpg");
+			switchBg("bg_1_3.jpg");
 		}
 		if(whichPic == 4){
-			switchBg("bg4.jpg");
+			switchBg("bg_1_4.jpg");
 		}
 		if(whichPic == 5){
-			switchBg("bg5.jpg");
+			switchBg("bg_1_5.jpg");
 			whichPic = 0;
 		}
 	}
