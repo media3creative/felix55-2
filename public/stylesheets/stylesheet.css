@@ -1,3 +1,8 @@
+@font-face {
+  font-family: TrajanPro-Regular;
+  src: url(/fonts/TrajanPro-Regular.otf) format("opentype");
+}
+
 .preloader {
   position: fixed;
   z-index: 100;
@@ -73,7 +78,7 @@
   left: 80px;
   height: 500px;
   width: 200px;
-  font-family: "Trajan Pro";
+  font-family: "TrajanPro-Regular";
   font-weight: 20;
   color: #fbf8f8;
 }
@@ -157,15 +162,16 @@ body {
 }
 
 h1 {
-  font-family: "Trajan Pro";
+  font-family: "TrajanPro-Regular";
   font-size: 30px;
   color: white;
   margin: 20px;
   opacity: 1;
+  font-weight: 100;
 }
 
 h2 {
-  font-family: "Trajan Pro";
+  font-family: "TrajanPro-Regular";
   font-size: 16px;
   color: #e6e6e6;
   margin: 0px;
@@ -177,7 +183,11 @@ p {
   opacity: 1;
   margin-top: 5px;
   letter-spacing: 0.15em;
-  font-family: "Trajan Pro";
+  font-family: "TrajanPro-Regular";
+}
+
+img {
+  border: 2px solid white;
 }
 
 .social-icon {
@@ -213,9 +223,29 @@ p {
   width: 500px;
 }
 
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black url(images/spinner.gif) no-repeat scroll center center;
+  z-index: 200;
+}
+
+.icon {
+  border: 0 solid white;
+}
+
+#lightbox {
+  position: absolute;
+  z-index: 500;
+  border: 4px solid white;
+}
+
 .normal-list {
   color: #cccccc;
-  font-family: "Trajan Pro";
+  font-family: "TrajanPro-Regular";
   line-height: 25px;
 }
 

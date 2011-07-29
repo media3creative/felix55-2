@@ -1,5 +1,5 @@
 var whichPic = 1;
-var currentPage = "#page1"
+var currentPage = "#page0"
 var bg_1_pic = "bg_1.jpg"
 var bg_2_pic = "bg_1.jpg"
 var agent=navigator.userAgent.toLowerCase();
@@ -38,6 +38,51 @@ function menu_appear(menu_item,delay_count,offset){
 	);
 }
 $(document).ready(function() {
+	//=====LIGHT BOX
+	function positionLightboxImage() {
+	  var top = ($(window).height() - $('#lightbox').height()) / 2;
+	  var left = ($(window).width() - $('#lightbox').width()) / 2;
+	  $('#lightbox')
+	    .css({
+	      'top': top + $(document).scrollTop(),
+	      'left': left
+	    })
+	    .fadeIn();
+	}
+
+	function removeLightbox() {
+	  $('#overlay, #lightbox').fadeOut('slow', function() {
+	      $(this).remove();
+	      $('body').css('overflow-y', 'auto'); // show scrollbars!
+	    });
+	}
+	$('a.lightbox').click(function(e) {
+		$('embed').remove();
+    //$('body').css('overflow-y', 'hidden'); // hide scrollbars!
+
+    $('<div id="overlay"></div>')
+      .css('top', $(document).scrollTop())
+      .css('opacity', '0')
+      .animate({'opacity': '0.7'}, 'slow').click(function() {
+        removeLightbox();
+      })
+      .appendTo('body');
+
+    $('<div id="lightbox"></div>')
+      .hide()
+      .appendTo('body');
+
+    $('<img />')
+      .attr('src', $(this).attr('href')).css("border","0px")
+      .load(function() {
+        positionLightboxImage();
+      }).click(function() {
+	        removeLightbox();
+	      }).appendTo('#lightbox');
+
+    return false;;
+	});
+	//=======END LIGHT BOX
 	//changePage("#page1")
 	$(".preloader").delay(600).slideToggle(600,"swing");
 	$(".bg2").css("display", "none");
@@ -257,7 +302,8 @@ function changePage(targetPage,targetBg){
 	};
 }
 function slideShow(){
-	if(currentPage == "#page1"
+	//alert(currentPage)
+	if(currentPage == "#homePage"
 	|| currentPage == "#page0"){
 		whichPic += 1;
 		if(whichPic == 1){
