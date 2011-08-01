@@ -239,11 +239,11 @@ $(document).ready(function() {
 		}
 	)
 	$('#sub-menu-6-item-4').click(function(){
-			changePage("#menuPage-4","bg_6.jpg");
+			changePage("#menuPage-4","bg_6_2.jpg");
 		}
 	)
 	$('#sub-menu-6-item-5').click(function(){
-			changePage("#menuPage-5","bg_6.jpg");
+			changePage("#menuPage-5","bg_6_2.jpg");
 		}
 	)
 	setInterval(slideShow,6000);
