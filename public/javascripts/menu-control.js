@@ -104,36 +104,58 @@ $(document).ready(function() {
 	
 	//alert($('#main-1-link').next());
 	$('#main-1-link').click(function(){
+			if($('#sub-menu-6').css("display") != "none"){
+					$('#sub-menu-6').slideToggle("fast");
+			}
 		changePage("#homePage","bg_1.jpg");
 		//switchBg("bg1.jpg");
 		// pageComeOut();
 	});
 	$('#main-2-link').click(function(){
+			if($('#sub-menu-6').css("display") != "none"){
+					$('#sub-menu-6').slideToggle("fast");
+			}
 		changePage("#venuePage","bg_2.jpg");
 		//switchBg("bg7.jpg");
 		// pageComeOut();
 	});
 	$('#main-3-link').click(function(){
+			if($('#sub-menu-6').css("display") != "none"){
+					$('#sub-menu-6').slideToggle("fast");
+			}
 		changePage("#galleryPage","bg_3.jpg");
 		//switchBg("bg6.jpg");
 	});
 	$('#main-4-link').click(function(){
+			if($('#sub-menu-6').css("display") != "none"){
+					$('#sub-menu-6').slideToggle("fast");
+			}
 		changePage("#reservationPage","bg_4.jpg");
 		//switchBg("bg6.jpg");
 	});
 	$('#main-5-link').click(function(){
+			if($('#sub-menu-6').css("display") != "none"){
+					$('#sub-menu-6').slideToggle("fast");
+			}
 		changePage("#calendarPage","bg_5.jpg");
 		//switchBg("bg6.jpg");
 	});
 	$('#main-6-link').click(function(){
+		if($('#sub-menu-6').css("display") != "none"){
+				$('#sub-menu-6').slideToggle("fast");
+		}
 		changePage("#happyHourPage","bg_5.jpg");
 		}
 	)
 	$('#main-7-link').click(function(){
+			switchBg('bg_6.jpg');
 			$('#sub-menu-6').slideToggle("fast");
 		}
 	);
 	$('#main-8-link').click(function(){
+			if($('#sub-menu-6').css("display") != "none"){
+					$('#sub-menu-6').slideToggle("fast");
+			}
 		changePage("#contactPage","bg_7.jpg");
 		//switchBg("bg6.jpg");
 	});
@@ -275,13 +297,15 @@ function changePage(targetPage,targetBg){
 	if(currentPage != targetPage){
 		$(targetPage).css("left",outPoint2)
 		$(targetPage).fadeIn(100).animate(
-		{'left':inPoint},"slow","swing"
+		{'left':inPoint},"slow","swing"	,function(){
+				switchBg(targetBg);
+			}
 		);
 		//$(currentPage).fadeOut();
 		$(currentPage).animate(
 		{'left':"2000px"},"slow","linear"
 		).fadeOut("fast",function(){
-			switchBg(targetBg);
+			//switchBg(targetBg);
 		});
 		currentPage = targetPage
 	};
