@@ -32,26 +32,16 @@
         %a{:href => "#", :id => "main-3-link"} GALLERY
         .menu-hl
       %li
-        %a{:href => "#", :id => "main-4-link"} CALENDAR
+        %a{:href => "#", :id => "main-4-link"} RESERVATIONS
         .menu-hl
       %li
-        %a{:href => "#", :id => "main-5-link"} EVENTS
+        %a{:href => "#", :id => "main-5-link"} EVENTS CALENDAR
         .menu-hl
-        %ol.sub-menu#sub-menu-5
-          %li#sub-menu-5-item-1
-            .red-line
-            Booking
-          %li#sub-menu-5-item-2 
-            .red-line
-            Bridal
-          %li#sub-menu-5-item-3
-            .red-line
-            Happy Hours
-          %li#sub-menu-5-item-4
-            .red-line
-            Celebration
       %li
-        %a{:href => "#", :id => "main-6-link"} MENU
+        %a{:href => "#", :id => "main-6-link"} HAPPY HOURS
+        .menu-hl
+      %li
+        %a{:href => "#", :id => "main-7-link"} MENU
         .menu-hl
         %ol.sub-menu#sub-menu-6
           %li#sub-menu-6-item-1
@@ -62,15 +52,18 @@
             Diner
           %li#sub-menu-6-item-3
             .red-line
-            Late Night
+            %span{:style => "font-size: 13px; letter-spacing: 0.1em"}Handcrafted Martini
           %li#sub-menu-6-item-4
             .red-line
             Wine List
           %li#sub-menu-6-item-5
             .red-line
-            Drinks
+            Brunch
+          %li#sub-menu-6-item-6
+            .red-line
+            Cocktails
       %li
-        %a{:href => "#", :id => "main-7-link"} CONTACT
+        %a{:href => "#", :id => "main-8-link"} CONTACT
         .menu-hl
   .content-container#homePage
     %h1 A new concept
@@ -126,7 +119,7 @@
       %a.lightbox{:href => "/images/pics/gallery_09_big.jpg"}
         %img{:height => "100", :src => "/images/pics/gallery_09_small.jpg", :width => "100"}
   .content-container#calendarPage
-    %h1 Calendar
+    %h1 Event Calendar
     %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "500"}
       %tr.event-container
         %td{:width => "120"} 
@@ -151,35 +144,17 @@
           %h2 Martini Weekend
           %p Saturday Happy Hour - 2pm-5pm (Bar Menu available) Sunday Brunch - coming soon.
     %br
-  .content-container#eventPage-1
+  .content-container#reservationPage
     %h1 Reservation
     %p Let Felix 55's experienced professional staff augment your own team by taking care of logistics such as hotel accommodations and car service or lending a hand in vendor negotiations. From concept development to the smallest details Felix 55's full-service Event Team will help to make your next special event an unrivaled experience
     %iframe{:allowtransparency => "true", :frameborder => "0", :height => "640", :scrolling => "no", :src => "http://media3creative.wufoo.com/embed/r7p2k9/", :style => "width:100%;border:none"}
       %a{:href => "http://media3creative.wufoo.com/forms/r7p2k9/", :title => "Felix 55 Booking"} Fill out my Wufoo form!
-
-  .content-container#eventPage-2
-    %h1 Bridal Events
-    %p Felix 55's Mezzanine level featuring a private bar area is the perfect location for you to host your private bridal affairs. Classy, sophisticated – sexy, this space is for making a lasting impression on your, now, growing family. Our mezzanine level can accommodate 75 seated with a buffet style prix fixe menu, or 150 standing; reception style. Please contact Katie, our Director of Special Events for more information on how you can take advantage of Felix 55's unique atmosphere. Click here to book your event online.
-    %ul.normal-list
-      %li Rehearsal Dinners
-      %li Bridal Showers
-      %li Receptions
-      %li Engagement Parties
-      %li Bachelor/Bachelorette Parties
-  .content-container#eventPage-3
+  .content-container#happyHourPage
     %h1 Happy Hours
     %p Felix 55's mezzanine level features a bar area that is perfect for private happy hours. Comfortably serving 80 guests in the bar area, 150 for the whole mezzanine level. For business or pleasure we can customize your happy hour with our in house DVD system – play a DVD with photos or company logo on the big screen TVson the walls. Click here to book your event online.
     %ul.normal-list
       %li Business
       %li Pleasure
-  .content-container#eventPage-4
-    %h1 Celebrations
-    %p There isn't a better place to celebrate! Felix 55 has a beautiful mezzanine level with a private bar area that is perfect for your next private affair! Blow out your candles in style with the sexy atmosphere in Felix 55, leave the cooking and cleaning up after to us and just sit back and enjoy your special day with your favorite people! Come in for drinks, dinner and/or appetizers and our unique menu and original cocktails will sure be a crowd pleaser. Accommodating 75 for a seated dinner, 150 to party. *Groups of 10+ will be on a preselected prix fixe menu; customized prix fixe menu cards are included at no additional charge. Click here to book your event online.
-    %ul.normal-list
-      %li Birthday Parties
-      %li Graduations
-      %li Baby Showers
-      %li Mar/Mah Mitzavaha
   .content-container#menuPage-1
     %h1 Lunch
     %h2 Entree
@@ -291,8 +266,8 @@
         %td
           %p $35
   .content-container#menuPage-3
-    %h1 Late Night
-    %h2 Entree
+    %h1 Martini & Cocktails
+    %h2 Handcrafted Martini
     %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "500"}
       %tr
         %td{:width => "460"} 
@@ -309,42 +284,44 @@
           %p Moet & Chandon Nectar Imperial Rose France
         %td
           %p $35
+      %tr
+        %td
+          %p Veuve Clicquot NV France
+        %td
+          %p $120
+      %tr
+        %td
+          %p Philipponnat Royale Reserve ‘08 France
+        %td
+          %p $90
     %br
-    %h2 Appetizer
+    %h2 Cocktails
     %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "500"}
       %tr
         %td{:width => "460"} 
-          %p Pascual Toso Brut Sparkling Spain
+          %p Far Niente Chardonnay ’07 California
         %td{:width => "40"}
-          %p $33
+          %p $35
       %tr
         %td
-          %p 1+1=3 Cava Brut NV Italy 
+          %p Llai Llai Chardonnay ‘08 Chile
         %td
           %p $40
       %tr
         %td
-          %p Moet & Chandon Nectar Imperial Rose France
+          %p MLotus Chardonnay ‘08 California 
         %td
-          %p $35
-    %br
-    %h2 Soups
-    %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "500"}
-      %tr
-        %td{:width => "460"} 
-          %p Pascual Toso Brut Sparkling Spain
-        %td{:width => "40"}
-          %p $33
+          %p $68
       %tr
         %td
-          %p 1+1=3 Cava Brut NV Italy 
+          %p LindaFlor Chardonnay ‘08 Argentina 
         %td
-          %p $40
+          %p $99
       %tr
         %td
-          %p Moet & Chandon Nectar Imperial Rose France
+          %p Neyers Chardonnay Carneros ‘09 California 
         %td
-          %p $35
+          %p $45
   .content-container#menuPage-4
     %h1 Wine
     %h2 Red Wine
@@ -403,7 +380,7 @@
         %td
           %p $45
   .content-container#menuPage-5
-    %h1 Drinks
+    %h1 Brunch
     %h2 Martini
     %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "500"}
       %tr
@@ -459,14 +436,47 @@
           %p Mango
         %td
           %p $15
+  .content-container#menuPage-6
+    %h1 Cocktails
+    %h2 Type 1
+    %table{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "500"}
+      %tr
+        %td{:width => "460"} 
+          %p Saki Martini
+        %td{:width => "40"}
+          %p $32
+      %tr
+        %td
+          %p Rum Martini 
+        %td
+          %p $43
+      %tr
+        %td
+          %p Kahlua Martini
+        %td
+          %p $28
+      %tr
+        %td
+          %p Blue Martini
+        %td
+          %p $55
+      %tr
+        %td
+          %p Bailey Martini
+        %td
+          %p $23
+    %br
   .content-container#contactPage
     %h1 Contact
     %p We welcome all feedback good and bad, and any questions from enquiring minds. If you've experienced a problem with your visit please give us as many details as possible and be sure to include the date and time. We do our best to correct mistakes and this information helps us to isolate specific problems and minimize their recurrence.
     %h2 Address
     %p 5510 Morningside Dr, #120 Houston, TX 77005
+    %br
+    %div{:style => "border:#606522 solid 1px;"}
+      %iframe{:frameborder => "0", :height => "360", :marginheight => "500", :marginwidth => "550", :scrolling => "no", :src => "http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=5510+MORNINGSIDE+SUITE+120+Houston,+TX+77005&aq=&ie=UTF8&hq=&hnear=5510+Morningside+Dr,+Houston,+Texas+77005&ll=29.785085,-95.50523&spn=0.104361,0.145912&z=12&iwloc=A&output=embed", :width => "500"}
+    %br
     %h2 General Inquiries
     %p (713)555 5555
-    %br
     %h2 Director of Special Events & Marketing
     %p
       %b Shein Armaan

@@ -38,6 +38,7 @@ function menu_appear(menu_item,delay_count,offset){
 	);
 }
 $(document).ready(function() {
+	$('.content-container').css("display","none")
 	//=====LIGHT BOX
 	function positionLightboxImage() {
 	  var top = ($(window).height() - $('#lightbox').height()) / 2;
@@ -93,30 +94,15 @@ $(document).ready(function() {
 	}
 	//=====menu-animation=====================
 	menu_appear("#main-1-link",1250);
-	menu_appear("#main-2-link",1500);
-	menu_appear("#main-3-link",1750);
-	menu_appear("#main-4-link",2000);
-	menu_appear("#main-5-link",2250);
+	menu_appear("#main-8-link",1500);
+	menu_appear("#main-2-link",1750);
+	menu_appear("#main-7-link",2000);
+	menu_appear("#main-3-link",2250);
 	menu_appear("#main-6-link",2500);
-	menu_appear("#main-7-link",2750);
+	menu_appear("#main-4-link",2750);
+	menu_appear("#main-5-link",3000);
 	
 	//alert($('#main-1-link').next());
-	$('#main-5-link').click(
-		function () {
-			if($('#sub-menu-6').css("display") != "none"){
-					$('#sub-menu-6').slideToggle("fast");
-			}
-				$('#sub-menu-5').slideToggle("fast");
-		}
-	)
-	$('#main-6-link').click(
-		function () {
-				if($('#sub-menu-5').css("display") != "none"){
-						$('#sub-menu-5').slideToggle("fast");
-				}
-					$('#sub-menu-6').slideToggle("fast");
-		}
-	)
 	$('#main-1-link').click(function(){
 		changePage("#homePage","bg_1.jpg");
 		//switchBg("bg1.jpg");
@@ -132,17 +118,28 @@ $(document).ready(function() {
 		//switchBg("bg6.jpg");
 	});
 	$('#main-4-link').click(function(){
-		changePage("#calendarPage","bg_4.jpg");
+		changePage("#reservationPage","bg_4.jpg");
 		//switchBg("bg6.jpg");
 	});
+	$('#main-5-link').click(function(){
+		changePage("#calendarPage","bg_5.jpg");
+		//switchBg("bg6.jpg");
+	});
+	$('#main-6-link').click(function(){
+		changePage("#happyHourPage","bg_5.jpg");
+		}
+	)
 	$('#main-7-link').click(function(){
+			$('#sub-menu-6').slideToggle("fast");
+		}
+	);
+	$('#main-8-link').click(function(){
 		changePage("#contactPage","bg_7.jpg");
 		//switchBg("bg6.jpg");
 	});
-
 		// pageComeOut();
 	//=====MOUSE ENTER MENU ITEM==============
-	$('#main-1-link,#main-2-link,#main-3-link,#main-4-link,#main-5-link,#main-6-link,#main-7-link,').hover(
+	$('#main-1-link,#main-2-link,#main-3-link,#main-4-link,#main-5-link,#main-6-link,#main-7-link,#main-8-link').hover(
 	  function () {
 			$(this).next().css(
 				//alert($(this).width())
@@ -150,7 +147,7 @@ $(document).ready(function() {
 			);
 			$(this).next().animate(
 				//alert($(this).width())
-				{"width":"140px","opacity":"1"},
+				{"width":"120px","opacity":"1"},
 				{duration: 200
 				,ease: "swing"
 				,queue: false}
@@ -159,7 +156,7 @@ $(document).ready(function() {
 			$(this).css("background-color","#FFFFFF");
 			$(this).animate(
 				//alert($(this).width())
-				{"margin-left":"30px","letter-spacing":"0.75em"},
+				{"margin-left":"10px","letter-spacing":"0.50em"},
 				{duration: 200
 				,ease: "swing"
 				,queue: false}
@@ -186,7 +183,7 @@ $(document).ready(function() {
 		  }
 	);
 	//=====MOUSE ENTER MENU ITEM==============
-	$('#sub-menu-5-item-1,#sub-menu-5-item-2,#sub-menu-5-item-3,#sub-menu-5-item-4,#sub-menu-6-item-1,#sub-menu-6-item-2,#sub-menu-6-item-3,#sub-menu-6-item-4,#sub-menu-6-item-5').hover(
+	$('#sub-menu-6-item-1,#sub-menu-6-item-2,#sub-menu-6-item-3,#sub-menu-6-item-4,#sub-menu-6-item-5,#sub-menu-6-item-6').hover(
 	  function () {
 			$(this).children().first().fadeIn().animate(
 				//alert($(this).width())
@@ -210,22 +207,6 @@ $(document).ready(function() {
 					$(this).css("color","white")
 		  }
 	);
-	$('#sub-menu-5-item-1').click(function(){
-			changePage("#eventPage-1","bg_5.jpg");
-		}
-	)
-	$('#sub-menu-5-item-2').click(function(){
-			changePage("#eventPage-2","bg_5.jpg");
-		}
-	)
-	$('#sub-menu-5-item-3').click(function(){
-			changePage("#eventPage-3","bg_5.jpg");
-		}
-	)
-	$('#sub-menu-5-item-4').click(function(){
-			changePage("#eventPage-4","bg_5.jpg");
-		}
-	)
 	$('#sub-menu-6-item-1').click(function(){
 			changePage("#menuPage-1","bg_6.jpg");
 		}
@@ -235,15 +216,19 @@ $(document).ready(function() {
 		}
 	)
 	$('#sub-menu-6-item-3').click(function(){
-			changePage("#menuPage-3","bg_6.jpg");
+			changePage("#menuPage-3","bg_4.jpg");
 		}
 	)
 	$('#sub-menu-6-item-4').click(function(){
-			changePage("#menuPage-4","bg_6_2.jpg");
+			changePage("#menuPage-4","wine_bottles.jpg");
 		}
 	)
 	$('#sub-menu-6-item-5').click(function(){
-			changePage("#menuPage-5","bg_6_2.jpg");
+			changePage("#menuPage-5","brunch.jpg");
+		}
+	)
+	$('#sub-menu-6-item-6').click(function(){
+			changePage("#menuPage-6","cocktails.jpg");
 		}
 	)
 	setInterval(slideShow,6000);
