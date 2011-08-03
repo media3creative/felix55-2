@@ -101,12 +101,18 @@ $(document).ready(function() {
 	menu_appear("#main-6-link",2500);
 	menu_appear("#main-4-link",2750);
 	menu_appear("#main-5-link",3000);
-	
+	//==============
+	$('.close-content').click(function(){
+		$(this).parent().slideToggle("slow");
+	});
 	//alert($('#main-1-link').next());
 	$('#main-1-link').click(function(){
-			if($('#sub-menu-6').css("display") != "none"){
-					$('#sub-menu-6').slideToggle("fast");
-			}
+		if($('#sub-menu-6').css("display") != "none"){
+				$('#sub-menu-6').slideToggle("fast");
+		}
+		if($('#homePage').css("display") == "none"){
+				$('#homePage').slideToggle("fast");
+		}
 		changePage("#homePage","bg_1.jpg");
 		//switchBg("bg1.jpg");
 		// pageComeOut();
@@ -130,7 +136,7 @@ $(document).ready(function() {
 			if($('#sub-menu-6').css("display") != "none"){
 					$('#sub-menu-6').slideToggle("fast");
 			}
-		changePage("#reservationPage","bg_4.jpg");
+		changePage("#reservationPage","reservation.jpg");
 		//switchBg("bg6.jpg");
 	});
 	$('#main-5-link').click(function(){
@@ -144,11 +150,14 @@ $(document).ready(function() {
 		if($('#sub-menu-6').css("display") != "none"){
 				$('#sub-menu-6').slideToggle("fast");
 		}
-		changePage("#happyHourPage","bg_5.jpg");
+		changePage("#happyHourPage","happy_hour.jpg");
 		}
 	)
 	$('#main-7-link').click(function(){
 			switchBg('bg_6.jpg');
+			if($('#sub-menu-6').css("display") != "none"){
+					$('#sub-menu-6').slideToggle("fast");
+			}
 			$('#sub-menu-6').slideToggle("fast");
 		}
 	);
@@ -156,7 +165,7 @@ $(document).ready(function() {
 			if($('#sub-menu-6').css("display") != "none"){
 					$('#sub-menu-6').slideToggle("fast");
 			}
-		changePage("#contactPage","bg_7.jpg");
+		changePage("#contactPage","contact.jpg");
 		//switchBg("bg6.jpg");
 	});
 		// pageComeOut();
@@ -230,11 +239,11 @@ $(document).ready(function() {
 		  }
 	);
 	$('#sub-menu-6-item-1').click(function(){
-			changePage("#menuPage-1","bg_6.jpg");
+			changePage("#menuPage-1","bg_1_3.jpg");
 		}
 	)
 	$('#sub-menu-6-item-2').click(function(){
-			changePage("#menuPage-2","bg_6.jpg");
+			changePage("#menuPage-2","bg_1_3.jpg");
 		}
 	)
 	$('#sub-menu-6-item-3').click(function(){
@@ -253,7 +262,7 @@ $(document).ready(function() {
 			changePage("#menuPage-6","cocktails.jpg");
 		}
 	)
-	setInterval(slideShow,6000);
+	setInterval(slideShow,4000);
 });
 function ipadFunc(){
 	if(is_ipad
@@ -283,7 +292,7 @@ function ipadFunc(){
 $(window).resize(function() {
  	var middlePoint = (parseInt($("body").css("width"))/2) - (parseInt($(currentPage).css("width"))/2) + 30 + "px"
 	//alert("tutu")
-	$(currentPage).css("left",middlePoint)
+	//$(currentPage).css("left",middlePoint)
 });
 
 //===============
@@ -322,15 +331,13 @@ function slideShow(){
 			switchBg("bg_1_2.jpg");
 		}
 		if(whichPic == 3){
-			switchBg("bg_1_3.jpg");
-		}
-		if(whichPic == 4){
 			switchBg("bg_1_4.jpg");
 		}
-		if(whichPic == 5){
+		if(whichPic == 4){
 			switchBg("bg_1_5.jpg");
-			whichPic = 0;
+			hichPic = 0;
 		}
+
 	}
 	//$(".bg").delay("300").fadeIn();
 }

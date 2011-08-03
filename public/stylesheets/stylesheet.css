@@ -67,13 +67,13 @@
   background-image: url(/images/logo.png);
   top: 50px;
   left: 100px;
-  position: absolute;
+  position: fixed;
   height: 89px;
   width: 156px;
 }
 
 .menu-container {
-  position: absolute;
+  position: fixed;
   top: 175px;
   left: 80px;
   height: 500px;
@@ -135,7 +135,7 @@
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   height: 170px;
   width: 400px;
   bottom: 0px;
@@ -147,7 +147,7 @@
 }
 
 .phone-num {
-  color: #931616;
+  color: white;
   font-size: 14px;
 }
 
@@ -190,6 +190,10 @@ img {
   border: 2px solid white;
 }
 
+td {
+  padding-left: 20px;
+}
+
 .social-icon {
   position: relative;
   margin-left: 20px;
@@ -197,8 +201,8 @@ img {
 
 .photo-preload {
   position: fixed;
-  bottom: 0px;
-  left: 0px;
+  top: 0px;
+  left: -2000px;
   height: 1px;
   width: 1px;
 }
@@ -215,7 +219,24 @@ img {
   border-style: solid;
   border-width: 0.7px;
   border-color: #383733;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.close-content {
+  height: 25px;
+  background-color: #931616;
+  float: right;
+  color: white;
+  font-family: "TrajanPro-Regular";
+  font-size: 15px;
+  width: 75px;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.close-content:hover {
+  background-color: white;
+  color: #931616;
 }
 
 .gallery-container {
