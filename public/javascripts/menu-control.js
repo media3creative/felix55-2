@@ -335,7 +335,7 @@ function slideShow(){
 		}
 		if(whichPic == 4){
 			switchBg("bg_1_5.jpg");
-			hichPic = 0;
+			whichPic = 0;
 		}
 
 	}
