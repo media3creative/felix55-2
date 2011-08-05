@@ -146,6 +146,30 @@
   font-size: 10px;
 }
 
+.copyright-box {
+  position: fixed;
+  text-align: left;
+  height: 70px;
+  width: 400px;
+  bottom: 0px;
+  right: 0px;
+  text-align: left;
+  margin-left: 80px;
+  color: #e6e6e6;
+  font-size: 10px;
+}
+
+.ourLink {
+  margin-top: 10px;
+  color: white;
+  font-family: "TrajanPro-Regular";
+  font-size: 12px;
+}
+
+.ourlink :hover {
+  color: #696969;
+}
+
 .phone-num {
   color: white;
   font-size: 14px;
