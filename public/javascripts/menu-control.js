@@ -39,6 +39,8 @@ function menu_appear(menu_item,delay_count,offset){
 }
 jQuery.noConflict();
 jQuery(document).ready(function() {
+	var stageHeight = parseInt(jQuery(window).height()) - 20 + "px";
+	jQuery('.left-side-bar').css("height",stageHeight);
 	jQuery('.content-container').css("display","none")
 	//=====LIGHT BOX
 	
@@ -249,16 +251,18 @@ function ipadFunc(){
 	};
 }
 jQuery(window).resize(function() {
- 	var middlePoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(currentPage).css("width"))/2) + 30 + "px"
+ 	//var middlePoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(currentPage).css("width"))/2) + 30 + "px"
 	//alert("tutu")
 	//jQuery(currentPage).css("left",middlePoint)
+	var stageHeight = parseInt(jQuery(window).height()) - 20 + "px";
+	jQuery('.left-side-bar').css("height",stageHeight);
 });
 
 //===============
 
 function changePage(targetPage,targetBg){
-	var inPoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(targetPage).css("width"))/2) - 100 + "px"
-	//var inPoint = "370px"
+	//var inPoint = (parseInt(jQuery("body").css("width"))/2) - (parseInt(jQuery(targetPage).css("width"))/2) - 100 + "px"
+	var inPoint = "370px"
 	var outPoint2 =  (0 - parseInt(jQuery(targetPage).css("width"))) + "px"
 	var outPoint =  (parseInt(jQuery("body").css("width")) + parseInt(jQuery(targetPage).css("width"))) + "px"
 	//alert(inPoint);

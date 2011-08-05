@@ -48,21 +48,46 @@
 	-moz-background-size: cover
 	-o-background-size: cover
 	background-size: cover
+.left-side-bar-bg
+	background-attachment: scroll
+	background-clip: border-box
+	background-color: transparent
+	background-image: url("/images/side_bar_bg.png")
+	background-origin: padding-box
+	background-position: 0 0
+	background-repeat: repeat
+	background-size: auto auto
+	height: 100%
+	left: 0
+	position: fixed
+	top: 0
+	width: 562px
 .left-side-bar
 	position: fixed
-	top: 0px
 	left: 0px
-	//background: rgba(0, 0, 0, 0.5)
-	background: url(/images/side_bar_bg.png)
-	width: 562px
+	top: 0px
+	//background: rgba(0, 0, 0, 1)
+	//background: url(/images/side_bar_bg.png)
+	width: 400px
 	height: 100%
+	min-height: 750px
 .logo
 	background-image: url(/images/logo.png)
-	top: 50px
-	left: 100px
-	position: fixed
+	margin-top: 50px
+	margin-left: 100px
+	position: relative
 	height: 89px
 	width: 156px
+.footer
+	position: absolute
+	//background-color: #FFFFFF
+	height: 170px
+	width: 400px
+	bottom: -30px
+	text-align: left
+	margin-left: 80px
+	color: #E6E6E6
+	font-size: 10px
 .menu-container
 	position: fixed
 	top: 175px
@@ -113,17 +138,7 @@
 	position: relative
 	line-height: 20px
 	font-size: 12px
-.footer
-	position: fixed
-	//background-color: #FFFFFF
-	height: 170px
-	width: 400px
-	bottom: 0px
-	left: 0px
-	text-align: left
-	margin-left: 80px
-	color: #E6E6E6
-	font-size: 10px
+
 .copyright-box
 	position: fixed
 	text-align: left
