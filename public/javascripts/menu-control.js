@@ -230,7 +230,7 @@ jQuery(document).ready(function() {
 			changePage("#menuPage-6","cocktails.jpg");
 		}
 	)
-	//setInterval(slideShow,4000);
+	setInterval(slideShow,6500);
 	if(is_ipad
 		|| is_iphone){
 		//window.location.reload(true);
