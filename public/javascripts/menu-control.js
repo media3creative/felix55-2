@@ -7,6 +7,7 @@ var is_iphone = ((agent.indexOf('iphone') != -1));
 var is_ipad = ((agent.indexOf('ipad') != -1));
 var is_safari = ((agent.indexOf('safari') != -1));
 jQuery.noConflict();
+
 function menu_appear(menu_item,delay_count,offset){
 	var width_1 = 250 + Math.random()*50 + "px"
 	var width_2 = 150 + Math.random()*50 + "px"
@@ -56,11 +57,8 @@ jQuery(document).ready(function() {
 	var stageHeight = parseInt(jQuery(window).height()) - 20 + "px";
 	jQuery('.left-side-bar').css("height",stageHeight);
 	jQuery('#homePage, #venuePage, #galleryPage, #reservationPage, #calendarPage, #happyHourPage, #menuPage-1, #menuPage-2, #menuPage-3, #menuPage-4, #menuPage-5, #menuPage-6, #contactPage-1, #contactPage-2').css("display","none")
-	//=====LIGHT BOX
-	
-	//=======END LIGHT BOX
-	//changePage("#page1")
-	jQuery(".preloader").delay(600).slideToggle(600,"swing");
+
+	//jQuery(".preloader").delay(600).slideToggle(600,"swing");
 	jQuery(".bg2").css("display", "none");
 	jQuery("body").css("overflow-x", "hidden");
 	//=======ANIMATION FOR MAIN MENU===========
