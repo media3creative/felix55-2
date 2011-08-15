@@ -6,7 +6,7 @@ var agent=navigator.userAgent.toLowerCase();
 var is_iphone = ((agent.indexOf('iphone') != -1));
 var is_ipad = ((agent.indexOf('ipad') != -1));
 var is_safari = ((agent.indexOf('safari') != -1));
-
+jQuery.noConflict();
 function menu_appear(menu_item,delay_count,offset){
 	var width_1 = 250 + Math.random()*50 + "px"
 	var width_2 = 150 + Math.random()*50 + "px"
@@ -37,7 +37,14 @@ function menu_appear(menu_item,delay_count,offset){
 	}
 	);
 }
-jQuery.noConflict();
+function closeSubmenu(){
+		if(jQuery('#sub-menu-6').css("display") != "none"){
+				jQuery('#sub-menu-6').slideToggle("fast");
+		}
+		if(jQuery('#sub-menu-8').css("display") != "none"){
+				jQuery('#sub-menu-8').slideToggle("fast");
+		}
+}
 jQuery(document).ready(function() {
 	var scroll1, scroll2;
   function loaded() {
@@ -48,7 +55,7 @@ jQuery(document).ready(function() {
 
 	var stageHeight = parseInt(jQuery(window).height()) - 20 + "px";
 	jQuery('.left-side-bar').css("height",stageHeight);
-	jQuery('#homePage, #venuePage, #galleryPage, #reservationPage, #calendarPage, #happyHourPage, #menuPage-1, #menuPage-2, #menuPage-3, #menuPage-4, #menuPage-5, #menuPage-6, #contactPage').css("display","none")
+	jQuery('#homePage, #venuePage, #galleryPage, #reservationPage, #calendarPage, #happyHourPage, #menuPage-1, #menuPage-2, #menuPage-3, #menuPage-4, #menuPage-5, #menuPage-6, #contactPage-1, #contactPage-2').css("display","none")
 	//=====LIGHT BOX
 	
 	//=======END LIGHT BOX
@@ -75,65 +82,46 @@ jQuery(document).ready(function() {
 	});
 	//alert(jQuery('#main-1-link').next());
 	jQuery('#main-1-link').click(function(){
-		if(jQuery('#sub-menu-6').css("display") != "none"){
-				jQuery('#sub-menu-6').slideToggle("fast");
-		}
+		closeSubmenu();
 		if(jQuery('#homePage').css("display") == "none"){
 				jQuery('#homePage').slideToggle("fast");
 		}
 		changePage("#homePage","bg_1.jpg");
-		//switchBg("bg1.jpg");
-		// pageComeOut();
 	});
 	jQuery('#main-2-link').click(function(){
-			if(jQuery('#sub-menu-6').css("display") != "none"){
-					jQuery('#sub-menu-6').slideToggle("fast");
-			}
 		changePage("#venuePage","bg_2.jpg");
-		//switchBg("bg7.jpg");
-		// pageComeOut();
 	});
 	jQuery('#main-3-link').click(function(){
-			if(jQuery('#sub-menu-6').css("display") != "none"){
-					jQuery('#sub-menu-6').slideToggle("fast");
-			}
+		closeSubmenu();
 		changePage("#galleryPage","bg_3.jpg");
 		//switchBg("bg6.jpg");
 	});
 	jQuery('#main-4-link').click(function(){
-			if(jQuery('#sub-menu-6').css("display") != "none"){
-					jQuery('#sub-menu-6').slideToggle("fast");
-			}
+		closeSubmenu();
 		changePage("#reservationPage","reservation.jpg");
 		//switchBg("bg6.jpg");
 	});
 	jQuery('#main-5-link').click(function(){
-			if(jQuery('#sub-menu-6').css("display") != "none"){
-					jQuery('#sub-menu-6').slideToggle("fast");
-			}
+		closeSubmenu();
 		changePage("#calendarPage","bg_5.jpg");
 		//switchBg("bg6.jpg");
 	});
 	jQuery('#main-6-link').click(function(){
-		if(jQuery('#sub-menu-6').css("display") != "none"){
-				jQuery('#sub-menu-6').slideToggle("fast");
-		}
+		closeSubmenu();
 		changePage("#happyHourPage","happy_hour.jpg");
 		}
 	)
 	jQuery('#main-7-link').click(function(){
 			switchBg('bg_6.jpg');
-			if(jQuery('#sub-menu-6').css("display") != "none"){
-					jQuery('#sub-menu-6').slideToggle("fast");
-			}
+			closeSubmenu();
 			jQuery('#sub-menu-6').slideToggle("fast");
 		}
 	);
 	jQuery('#main-8-link').click(function(){
-			if(jQuery('#sub-menu-6').css("display") != "none"){
-					jQuery('#sub-menu-6').slideToggle("fast");
-			}
-		changePage("#contactPage","contact.jpg");
+		closeSubmenu();
+		switchBg('contact.jpg');
+		jQuery('#sub-menu-8').slideToggle("fast");
+		//changePage("#contactPage","contact.jpg");
 		//switchBg("bg6.jpg");
 	});
 		// pageComeOut();
@@ -182,7 +170,7 @@ jQuery(document).ready(function() {
 		  }
 	);
 	//=====MOUSE ENTER MENU ITEM==============
-	jQuery('#sub-menu-6-item-1,#sub-menu-6-item-2,#sub-menu-6-item-3,#sub-menu-6-item-4,#sub-menu-6-item-5,#sub-menu-6-item-6').hover(
+	jQuery('#sub-menu-6-item-1,#sub-menu-6-item-2,#sub-menu-6-item-3,#sub-menu-6-item-4,#sub-menu-6-item-5,#sub-menu-6-item-6,#sub-menu-8-item-1,#sub-menu-8-item-2').hover(
 	  function () {
 			jQuery(this).children().first().fadeIn().animate(
 				//alert(jQuery(this).width())
@@ -230,6 +218,14 @@ jQuery(document).ready(function() {
 			changePage("#menuPage-6","cocktails.jpg");
 		}
 	)
+	jQuery('#sub-menu-8-item-1').click(function(){
+			changePage("#contactPage-1","contact.jpg");
+		}
+	)
+	jQuery('#sub-menu-8-item-2').click(function(){
+			changePage("#contactPage-2","contact.jpg");
+		}
+	)
 	setInterval(slideShow,6500);
 	if(is_ipad
 		|| is_iphone){
@@ -240,8 +236,8 @@ jQuery(document).ready(function() {
 	  //document.addEventListener('DOMContentLoaded', loaded, false);
 		
 		jQuery(".content").removeClass("content").addClass("scroller")
-		jQuery("#homePage, #venuePage, #galleryPage, #reservationPage, #calendarPage, #happyHourPage, #menuPage-1, #menuPage-2, #menuPage-3,#menuPage-4, #menuPage-5, #menuPage-6, #contactPage").css({"height":"400px","overflow":"auto","top":"75px","display":"block","left":"-1400px"});
-		jQuery("#reservationPage, #contactPage").css({"height":"auto","overflow":"visible","top":"75px","display":"block","left":"-1400px"}).removeClass("scroller")
+		jQuery("#homePage, #venuePage, #galleryPage, #reservationPage, #calendarPage, #happyHourPage, #menuPage-1, #menuPage-2, #menuPage-3,#menuPage-4, #menuPage-5, #menuPage-6, #contactPage-1").css({"height":"400px","overflow":"auto","top":"75px","display":"block","left":"-1400px"});
+		jQuery("#reservationPage, #contactPage-1").css({"height":"auto","overflow":"visible","top":"75px","display":"block","left":"-1400px"}).removeClass("scroller")
 		scroll1 = new iScroll('homePage');
 		scroll2 = new iScroll('menuPage-1');
 		scroll3 = new iScroll('menuPage-2');

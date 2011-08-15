@@ -80,7 +80,6 @@
 }
 
 .logo {
-  background-image: url(/images/logo.png);
   margin-top: 50px;
   margin-left: 100px;
   position: relative;
@@ -248,7 +247,7 @@ td {
   width: 1px;
 }
 
-#homePage, #venuePage, #galleryPage, #reservationPage, #calendarPage, #happyHourPage, #menuPage-1, #menuPage-2, #menuPage-3, #menuPage-4, #menuPage-5, #menuPage-6, #contactPage {
+#homePage, #venuePage, #galleryPage, #reservationPage, #calendarPage, #happyHourPage, #menuPage-1, #menuPage-2, #menuPage-3, #menuPage-4, #menuPage-5, #menuPage-6, #contactPage-1, #contactPage-2 {
   position: absolute;
   padding: 10px;
   z-index: 1;
@@ -338,4 +337,20 @@ td {
   border-radius: 5px 25px 5px 25px;
   padding: 20px;
   padding-bottom: 40px;
+}
+
+.contact-form {
+  overflow: hidden;
+}
+.contact-form iframe {
+  position: relative;
+  top: -30px;
+  margin-top: -30px;
+}
+
+.download {
+  color: white;
+  font-family: "TrajanPro-Regular";
+  font-size: 15px;
+  margin: 20px;
 }
