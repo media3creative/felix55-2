@@ -147,6 +147,7 @@ var QueryLoader = {
 	},
 	
 	doneLoad: function() {
+		//alert("tutu2")
 		//prevent IE from calling the fix
 		clearTimeout(QueryLoader.ieTimeout);
 		
