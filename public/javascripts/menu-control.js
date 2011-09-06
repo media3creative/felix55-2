@@ -47,13 +47,7 @@ function closeSubmenu(){
 		}
 }
 jQuery(document).ready(function() {
-	var scroll1, scroll2;
-  function loaded() {
-  scroll1 = new iScroll('homePage', { useTransition:true });
-  }
-  document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-  document.addEventListener('DOMContentLoaded', loaded, false);
-
+	
 	var stageHeight = parseInt(jQuery(window).height()) - 20 + "px";
 	jQuery('.left-side-bar').css("height",stageHeight);
 	jQuery('#homePage, #venuePage, #galleryPage, #reservationPage, #calendarPage, #happyHourPage, #menuPage-1, #menuPage-2, #menuPage-3, #menuPage-4, #menuPage-5, #menuPage-6, #contactPage-1, #contactPage-2').css("display","none")
@@ -232,6 +226,12 @@ jQuery(document).ready(function() {
 		//alert(window.orientation)
 		//jQuery(".content-container").css({"height":"200px","overflow":"auto"});
 	  //document.addEventListener('DOMContentLoaded', loaded, false);
+		var scroll1, scroll2;
+	  function loaded() {
+	  scroll1 = new iScroll('homePage', { useTransition:true });
+	  }
+	  document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	  document.addEventListener('DOMContentLoaded', loaded, false);
 		
 		jQuery(".content").removeClass("content").addClass("scroller")
 		jQuery("#homePage, #venuePage, #galleryPage, #reservationPage, #calendarPage, #happyHourPage, #menuPage-1, #menuPage-2, #menuPage-3,#menuPage-4, #menuPage-5, #menuPage-6, #contactPage-1").css({"height":"400px","overflow":"auto","top":"75px","display":"block","left":"-1400px"});
