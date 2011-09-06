@@ -282,7 +282,7 @@ td {
   border-style: solid;
   border-width: 0.7px;
   border-color: #383733;
-  background: rgba(0, 0, 0, 0.7);
+  background-image: url("/images/trans_bg.png");
   height: auto;
 }
 
@@ -300,7 +300,7 @@ td {
   border-style: solid;
   border-width: 0.7px;
   border-color: #383733;
-  background: rgba(0, 0, 0, 0.7);
+  background-image: url("/images/trans_bg.png");
   height: auto;
 }
 
@@ -339,7 +339,7 @@ td {
 }
 
 .content-text {
-  background: rgba(255, 255, 255, 0.6);
+  background-image: url("/images/trans_bg.png");
   height: auto;
   -moz-border-radius: 5px 25px 5px 25px;
   border-radius: 5px 25px 5px 25px;
