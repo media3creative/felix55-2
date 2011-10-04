@@ -219,8 +219,7 @@ jQuery(document).ready(function() {
 		}
 	)
 	setInterval(slideShow,6500);
-	if(is_ipad
-		|| is_iphone){
+	if(is_ipad){
 		//window.location.reload(true);
 		//alert(parseInt(jQuery("window").css("height")))
 		//alert(window.orientation)
