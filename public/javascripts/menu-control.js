@@ -104,14 +104,14 @@ jQuery(document).ready(function() {
 		}
 	)
 	jQuery('#main-7-link').click(function(){
-			switchBg('bg_6.jpg');
+		changePage("#menuPage-1","bg_6.jpg");
 			closeSubmenu();
 			jQuery('#sub-menu-6').slideToggle("fast");
 		}
 	);
 	jQuery('#main-8-link').click(function(){
 		closeSubmenu();
-		switchBg('contact.jpg');
+		changePage("#contactPage-1","contact.jpg");
 		jQuery('#sub-menu-8').slideToggle("fast");
 		//changePage("#contactPage","contact.jpg");
 		//switchBg("bg6.jpg");
