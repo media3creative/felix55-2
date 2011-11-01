@@ -49,6 +49,10 @@ body{
 	text-align:right;
 	margin-top: 4px;
 	margin-right: 20px;
+	color: white;
+}
+.footer-link a{
+	color: white;
 }
 .footer{
 	bottom:0px;
