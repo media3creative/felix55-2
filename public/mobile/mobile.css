@@ -37,14 +37,14 @@ body{
 	color: #CCC;
 }
 .copyright{
-	width: 45%;
+	width: 100%;
 	float: left;
-	text-align:left;
+	text-align: center;
 	margin-top: 4px;
-	margin-left: 20px;
 }
 .footer-link{
 	width: 45%;
+	
 	float:left;
 	text-align:right;
 	margin-top: 4px;
@@ -52,6 +52,9 @@ body{
 	color: white;
 }
 .footer-link a{
+	color: white;
+}
+.copyright a{
 	color: white;
 }
 .footer{
