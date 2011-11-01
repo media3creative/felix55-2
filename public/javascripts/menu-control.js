@@ -7,7 +7,12 @@ var is_iphone = ((agent.indexOf('iphone') != -1));
 var is_ipad = ((agent.indexOf('ipad') != -1));
 var is_safari = ((agent.indexOf('safari') != -1));
 jQuery.noConflict();
-
+<!--
+if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || navigator.userAgent.match(/Android/i))
+{
+location.href='/mobile/index.html';
+}
+-->
 function menu_appear(menu_item,delay_count,offset){
 	var width_1 = 250 + Math.random()*50 + "px"
 	var width_2 = 150 + Math.random()*50 + "px"
