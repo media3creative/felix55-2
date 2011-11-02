@@ -223,7 +223,7 @@ jQuery(document).ready(function() {
 			changePage("#contactPage-2","contact.jpg");
 		}
 	)
-	setInterval(slideShow,6500);
+	//setInterval(slideShow,6500);
 	if(is_ipad){
 		//window.location.reload(true);
 		//alert(parseInt(jQuery("window").css("height")))
