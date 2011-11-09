@@ -8,7 +8,7 @@ var is_ipad = ((agent.indexOf('ipad') != -1));
 var is_safari = ((agent.indexOf('safari') != -1));
 jQuery.noConflict();
 <!--
-if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || navigator.userAgent.match(/Android/i))
+if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || navigator.userAgent.match(/Android/i) || (navigator.appVersion.indexOf("MSIE 7.")==1))
 {
 location.href='/mobile/index.html';
 }
